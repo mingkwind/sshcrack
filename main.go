@@ -15,7 +15,7 @@ func init() {
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "password-crack"
+	app.Name = "sshcrack"
 	app.Author = "M1ngkvv1nd"
 	app.Usage = "Weak ssh password scanner"
 	app.Commands = []cli.Command{cmd.Scan}

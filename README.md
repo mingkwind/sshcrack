@@ -28,7 +28,7 @@ EOF
 二、在双路由器局域网（比如校园网10.x.x.x+外网192.168.x.x）中，如果其中一台主机的其中一个网段的ip失效（因为openstack的neutron网桥断了之类的），可使用nmap在另一个网段扫描开启22端口的主机，然后将主机ip导出至ip_list.txt，然后在user.txt和pass.txt中分别设置好用户名密码，即可自动化扫描出在另一个网段符合登录账号密码的主机，登进去查看ip是否要寻找的主机ip。
 
 ```shell
-nmap -p 22 -n --open 192.168.1.0/24 | grep 192 |awk '{print $5}'> ip_list.txt
+nmap -p 22 -n --open 192.168.1.0/24 | grep 192 |awk '{print $5}' > ip_list.txt
 ```
 
 ![image-20220627113650660](readme/image-20220627113650660.png)
